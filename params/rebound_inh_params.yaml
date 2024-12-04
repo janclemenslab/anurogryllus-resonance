@@ -1,0 +1,11 @@
+filter_exc_dur: 2.001406325725762
+filter_exc_gain: 0.1
+filter_delay: 22.931375375835284
+filter_inh_dur: 5.056218765450139
+filter_inh_gain: 0.04533568195559058
+ln2_filter_exc_dur: 2.45552
+ln2_filter_exc_gain: .6324
+ln2_filter_inh_dur: 2.4349
+ln2_filter_inh_gain: 1.0123
+ln2_ln4_delay: 7.293
+ln2_ln4_gain: .9439

@@ -1,0 +1,13 @@
+# FITTED
+# filter_delay: 0.04533568195559058
+# filter_exc_dur: 22.931375375835284
+# filter_exc_gain: 2.001406325725762
+# filter_inh_dur: 5.056218765450139
+# filter_inh_gain: 10.0
+
+# FIXED
+filter_exc_dur: 2.001406325725762
+filter_exc_gain: 0.1
+filter_delay: 22.931375375835284
+filter_inh_dur: 5.056218765450139
+filter_inh_gain: 0.04533568195559058

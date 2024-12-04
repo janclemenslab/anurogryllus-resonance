@@ -1,0 +1,17 @@
+axes.autolimit_mode: round_numbers
+axes.xmargin: 0
+axes.ymargin: 0
+
+axes.spines.top: False
+axes.spines.right: False
+
+axes.labelsize: 16
+
+image.interpolation: nearest
+image.aspect: auto
+image.origin: lower
+
+font.size: 13
+font.family: Helvetica
+pdf.fonttype: 42
+ps.fonttype: 42
