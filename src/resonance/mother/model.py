@@ -60,10 +60,9 @@ def run_model(stim: np.ndarray, p: Params, verbose_output: bool = False, return_
 
     # --  LN5 INPUT strong adaptation via differentiating filter
     #     - inh. decreases during long pulses - this reduces PIR for long pulses
-    p.ln5_ada_filter = np.diff(gausswin(p.ln5_ada_filter_dur, 3.5))
-    p.ln5_ada_filter = jax.ops.index_update(p.ln5_ada_filter,
-                                            jax.ops.index[int(np.ceil(p.ln5_ada_filter_dur / 2)-1):],
-                                            p.ln5_ada_filter_exc_gain * p.ln5_ada_filter[int(np.ceil(p.ln5_ada_filter_dur / 2)-1):])
+    p.ln5_ada_filter = jnp.diff(gausswin(p.ln5_ada_filter_dur, 3.5))
+    p.ln5_ada_filter=p.ln5_ada_filter.at[int(np.ceil(p.ln5_ada_filter_dur / 2)-1):].set(p.ln5_ada_filter_exc_gain *p.ln5_ada_filter[int(np.ceil(p.ln5_ada_filter_dur / 2)-1):]) 
+
 
     p.ln5_ada_nonlinearity = lambda x=None: np.clip(x, - np.inf, 0)
     ln5_ada_output = p.ln5_ada_nonlinearity(func.ln(ln2_ln5_output, p.ln5_ada_filter))

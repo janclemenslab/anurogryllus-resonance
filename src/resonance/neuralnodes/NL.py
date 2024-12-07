@@ -22,7 +22,7 @@ def rectifier(x, minval=0, maxval=None):
     return np.clip(x, minval, maxval)
 
 
-@jit(fastmath=True, nogil=True, nopython=True)
+#@jit(fastmath=True, nogil=True, nopython=True)
 def relu(x, thres: float = 0):
     return np.clip(x, thres, None) - thres
 
